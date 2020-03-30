@@ -4,32 +4,45 @@
 <meta charset="utf-8">
 <title>Web</title>
 <link rel="stylesheet" type="text/css" href="CSS.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="./tablesorter-master/js/jquery.tablesorter.js"></script>
 <script src="JS.js"></script>
+<script type="text/javascript">
+      //所有表頭排序
+    $(document).ready(function() 
+            { 
+                $("#myTable").tablesorter(); 
+            } 
+        ); 
+</script>
 </head>
 <body>
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search something">
-
-    <table id="myTable">
-        <tr class="header">
-        <th style="width:60%;">名稱</th>
-        <th style="width:40%;">電話</th>
-        </tr>
-        <tr>
-        <td>Bob</td>
-        <td>0921546745</td>
-        </tr>
-        <tr>
-        <td>Mary</td>
-        <td>0911545635</td>
-        </tr>
-        <tr>
-        <td>Mark</td>
-        <td>0932745652</td>
-        </tr>
-        <tr>
-        <td>Louis</td>
-        <td>0925698421</td>
-        </tr>
+    <table id="myTable" class="tablesorter">
+        <thead>
+            <tr class="header">
+                <th style="width:60%;">名稱</th>
+                <th style="width:40%;">電話</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td>Bob</td>
+                    <td>0921546745</td>
+                </tr>
+                <tr>
+                    <td>Mary</td>
+                    <td>0911545635</td>
+                </tr>
+                <tr>
+                    <td>Mark</td>
+                    <td>0932745652</td>
+                </tr>
+                <tr>
+                    <td>Louis</td>
+                    <td>0925698421</td>
+                </tr>
+            </tbody>    
+        </thead>
     </table>
 </body>
 </html>
